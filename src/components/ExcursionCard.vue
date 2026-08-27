@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue';
+
 const props = defineProps({
   excursion: {
     type: Object,
@@ -14,6 +16,10 @@ const formatDate = (date) => {
     minute: '2-digit'
   }).format(date)
 }
+const formattedDate = computed(() =>{
+  return formatDate(props.excursion.date)
+}
+)
 </script>
 
 <template>
@@ -46,7 +52,7 @@ const formatDate = (date) => {
 
       <!-- Дата и время -->
       <time class="date">
-        {{ formatDate(props.excursion.date) }}
+        {{ formattedDate }}
       </time>
 
       <!-- Заголовок -->

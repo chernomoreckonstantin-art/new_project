@@ -1,4 +1,5 @@
 <script setup>
+import ExcursionCard from './components/ExcursionCard.vue';
 import UserCard from './components/ExcursionCard.vue'
 
 import { excursions } from './data/excursions.js';
@@ -6,7 +7,7 @@ import { excursions } from './data/excursions.js';
 
 <template>
   <main class="cards">
-    <UserCard
+    <ExcursionCard
       v-for="excursion in excursions"
       :key="excursion.id"
       :excursion="excursion"
