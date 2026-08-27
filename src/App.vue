@@ -1,5 +1,5 @@
 <script setup>
-import UserCard from './components/user_1.vue'
+import UserCard from './components/Cards.vue'
 
 import { excursions } from './data/excursions.js';
 </script>
