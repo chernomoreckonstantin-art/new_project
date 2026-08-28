@@ -1,6 +1,5 @@
 <script setup>
 import ExcursionCard from './components/ExcursionCard.vue';
-import UserCard from './components/ExcursionCard.vue'
 
 import { excursions } from './data/excursions.js';
 </script>
