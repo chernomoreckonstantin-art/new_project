@@ -23,76 +23,78 @@ const formattedDate = computed(() =>{
 </script>
 
 <template>
-  <article class="card">
+  <RouterLink :to="`/tours/${props.excursion.id}`" class="card-link">
+    <article class="card">
 
-    <!-- Картинка -->
-    <div class="image-wrapper">
+      <!-- Картинка -->
+      <div class="image-wrapper">
 
-      <img
-        :src="props.excursion.image"
-        :alt="props.excursion.title"
-        class="card-image"
-      />
+        <img
+          :src="props.excursion.image"
+          :alt="props.excursion.title"
+          class="card-image"
+        />
 
-      <!-- Теги -->
-      <div class="tags">
-        <span
-          v-for="tag in props.excursion.tags"
-          :key="tag"
-          class="tag"
-        >
-          {{ tag }}
-        </span>
-      </div>
-
-    </div>
-
-    <!-- Содержимое карточки -->
-    <div class="card-content">
-
-      <!-- Дата и время -->
-      <time class="date">
-        {{ formattedDate }}
-      </time>
-
-      <!-- Заголовок -->
-      <h2 class="title">
-        {{ props.excursion.title }}
-      </h2>
-
-      <!-- Описание -->
-      <p class="description">
-        {{ props.excursion.description }}
-      </p>
-
-      <!-- Цены -->
-      <div class="prices">
-
-        <div class="price">
-          <strong>
-            {{ props.excursion.adultPrice }} ₽
-          </strong>
-
-          <small>
-            Взрослый
-          </small>
-        </div>
-
-        <div class="price">
-          <strong>
-            {{ props.excursion.childPrice }} ₽
-          </strong>
-
-          <small>
-            Детский
-          </small>
+        <!-- Теги -->
+        <div class="tags">
+          <span
+            v-for="tag in props.excursion.tags"
+            :key="tag"
+            class="tag"
+          >
+            {{ tag }}
+          </span>
         </div>
 
       </div>
 
-    </div>
+      <!-- Содержимое карточки -->
+      <div class="card-content">
 
-  </article>
+        <!-- Дата и время -->
+        <time class="date">
+          {{ formattedDate }}
+        </time>
+
+        <!-- Заголовок -->
+        <h2 class="title">
+          {{ props.excursion.title }}
+        </h2>
+
+        <!-- Описание -->
+        <p class="description">
+          {{ props.excursion.description }}
+        </p>
+
+        <!-- Цены -->
+        <div class="prices">
+
+          <div class="price">
+            <strong>
+              {{ props.excursion.adultPrice }} ₽
+            </strong>
+
+            <small>
+              Взрослый
+            </small>
+          </div>
+
+          <div class="price">
+            <strong>
+              {{ props.excursion.childPrice }} ₽
+            </strong>
+
+            <small>
+              Детский
+            </small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </article>
+  </RouterLink>
 </template>
 
 <style scoped>
@@ -120,6 +122,11 @@ const formattedDate = computed(() =>{
   height: 300px;
 
   object-fit: cover;
+}
+.card-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .tags {

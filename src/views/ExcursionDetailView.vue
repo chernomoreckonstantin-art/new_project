@@ -15,6 +15,7 @@ console.log(route.params.id);
 
 <template>
   <div>
+    <RouterLink to="/" class="back-link">← Назад к списку</RouterLink>
     <h1>{{ excursion.title }}</h1>
 
     <img
@@ -23,8 +24,22 @@ console.log(route.params.id);
     >
 
     <p>{{ excursion.description }}</p>
-
     <p>{{ excursion.adultPrice }} ₽</p>
     <p>{{ excursion.childPrice }} ₽</p>
   </div>
 </template>
+<style>
+.back-link{
+  .back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+}
+</style>
