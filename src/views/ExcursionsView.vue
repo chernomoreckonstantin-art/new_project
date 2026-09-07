@@ -18,6 +18,7 @@ import { excursions } from '../data/excursions';
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  background-color:rgb(241, 234, 224);
 
   max-width: 1320px;
   margin: 0 auto;
@@ -41,4 +42,11 @@ import { excursions } from '../data/excursions';
     grid-template-columns: 1fr;
   }
 }
+</style>
+<style>
+#app {
+  background-color:rgb(241, 234, 224);
+  margin: 0;
+}
+
 </style>
