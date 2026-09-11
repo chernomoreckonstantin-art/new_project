@@ -47,6 +47,8 @@ import { excursions } from '../data/excursions';
 #app {
   background-color:rgb(241, 234, 224);
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 </style>
